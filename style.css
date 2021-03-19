@@ -1,0 +1,647 @@
+* {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  background-image: linear-gradient(35deg, rgb(29, 31, 4), rgb(8, 44, 4));
+  color: rgba(255, 255, 255, 0.863);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Home page */
+.homeBody {
+  height: 100vh;
+  background-image: url("https://source.unsplash.com/G0miZ5OYaXI/1600x900");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  font-style: italic;
+}
+
+.centerText {
+  position: absolute;
+  width: 90vw;
+  height: 200px;
+  top: 20%;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.centerText h1 {
+  font-size: 6vmin;
+
+  animation-name: fade-in;
+  animation-duration: 3s;
+}
+
+.enterBtn {
+  margin-top: 2em;
+  padding: 1em;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.35);
+  color: white;
+  width: auto;
+
+  text-transform: uppercase;
+  font-size: min(4vmin, 24px);
+  cursor: pointer;
+
+  animation-name: fade-in;
+  animation-duration: 3s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bottomNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: max(10vw, 100px);
+  height: max(5vh, 40px);
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  background-color: rgba(184, 184, 184, 0.425);
+  border: solid 3px rgba(75, 75, 75, 0.253);
+  border-radius: 3px;
+  text-align: center;
+  color: white;
+
+  animation-name: fade-in;
+  animation-duration: 3s;
+}
+
+#insta-icon,
+#mail-icon {
+  height: min(8vh, 35px);
+  cursor: pointer;
+  padding: 2px;
+}
+
+#insta-icon:hover,
+#mail-icon:hover,
+.enterBtn:hover {
+  opacity: 0.7;
+}
+
+/* BurgerMenu */
+
+.burgerDiv {
+  display: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.burgerBar {
+  width: 8vw;
+  height: 1.5vw;
+  background-color: azure;
+  margin: 1.5vw;
+  border-radius: 1px;
+}
+
+.burgerMenu {
+  height: 100vh;
+  width: 80vw;
+  position: fixed;
+  left: -80vw;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  transition: all 0.7s;
+}
+
+.links {
+  position: relative;
+  top: 10%;
+}
+
+.links li {
+  list-style: none;
+  margin: 1em;
+}
+
+.links a {
+  color: white;
+}
+
+.burgerClose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: white;
+  font-size: 30px;
+}
+
+/* Navbar */
+
+.navBar {
+  background-color: rgb(24, 24, 24);
+  height: 3em;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.nameLogo {
+  letter-spacing: 0.1vw;
+  text-align: center;
+  align-self: center;
+  font-size: 18px;
+  width: 50%;
+  color: white;
+  text-shadow: 0 0 9px rgba(77, 255, 101, 0.993);
+}
+
+.navBarList {
+  width: 50%;
+  padding-top: 1em;
+  list-style: none;
+  display: flex;
+}
+
+.navBarList li {
+  width: 33%;
+  color: cornsilk;
+  cursor: pointer;
+  text-align: center;
+}
+
+.navBarList li a {
+  position: relative;
+  padding: 2px 0;
+}
+
+.navBarList li a:link,
+.navBarList li a:visited,
+.navBarList li a:hover,
+.navBarList li a:active {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.navBarList li a::before,
+.navBarList li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(62, 143, 47, 0.705);
+  right: 0;
+  transform: scaleX(0);
+}
+
+.navBarList li a::before {
+  top: 0;
+}
+
+.navBarList li a::after {
+  bottom: 0;
+}
+
+.navBarList li a:hover::before,
+.navBarList li a:hover::after {
+  transform: scaleX(1);
+  transition: all 0.4s;
+}
+
+/* About page */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  margin-bottom: max(5vh, 40px);
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.aboutFirstImgDiv {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutFirstImgDiv::before {
+  content: "The page about me";
+  position: absolute;
+  top: 35%;
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 100;
+}
+
+.fullscreenImg {
+  height: 95vh;
+  width: 100vw;
+  object-fit: cover;
+}
+
+.aboutFirstImgDiv a {
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  bottom: 10%;
+  padding: 1em;
+  text-align: center;
+  border: 2px black solid;
+  border-radius: 2em;
+  background-color: rgba(0, 0, 0, 0.2);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.row {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 30vw;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.col {
+  width: 50%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.columnImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.textDiv {
+  margin: 20px;
+}
+
+.colParagraph {
+  column-count: 2;
+}
+
+/* Contact and signup page */
+
+.contactForm,
+.signupForm {
+  background-color: rgba(0, 0, 0, 0.15);
+  color: white;
+  width: 60%;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: solid 1px rgba(102, 102, 102, 0.7);
+}
+
+.contactForm h1,
+.signupForm h1 {
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: 30px auto 20px auto;
+  width: 100%;
+  text-align: center;
+}
+
+input::placeholder {
+  color: rgba(184, 184, 184, 0.7);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0px 1px 1px #de1dde;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  width: 100%;
+  margin: 1em 0;
+  padding: 5px 2px;
+  border-bottom: solid 2px rgba(75, 75, 75, 0.61);
+}
+
+.contactForm #email {
+  display: none;
+}
+
+#letterChoices {
+  margin: 1em 0;
+  display: none;
+}
+
+#letterChoices p,
+#newsletterP {
+  margin: 0 0 0.3em 0;
+}
+
+.error {
+  color: red;
+}
+
+/*Change the color of the autofilled areas.*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px rgb(190, 209, 185) inset !important;
+}
+
+textarea {
+  border: solid 2px rgba(75, 75, 75, 0.61);
+  border-radius: 5px;
+  resize: none;
+  width: 100%;
+  height: 20vh;
+}
+
+.submitHolder {
+  text-align: center;
+}
+
+input[type="submit"] {
+  margin: auto;
+  padding: 3px;
+  width: 100px;
+  height: 30px;
+  background-color: rgba(69, 119, 60, 0.61);
+  color: rgba(255, 255, 255, 0.863);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Portfolio */
+
+.portfolioh1 {
+  margin-top: 5vh;
+  font-size: 72px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgb(255, 230, 160);
+}
+
+.portfolioh2 {
+  text-align: center;
+}
+
+.portfolioDiv {
+  display: grid;
+  grid-template-columns: 42% 42%;
+  column-gap: 2em;
+  row-gap: 2em;
+  justify-items: center;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.imgAndText {
+  background-color: rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.9s;
+  padding: 1em;
+  border: solid 2px rgba(0, 0, 0, 0.3);
+  border-radius: 0.4em;
+}
+
+a {
+  transition: all 0.6s;
+}
+
+.imgAndText:hover .imgAndText {
+  filter: grayscale(100%);
+}
+
+.portfolioImg {
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.portfolioImgDesc {
+  font-weight: 700;
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox:target {
+  display: flex;
+}
+
+.lightbox-container {
+  background: rgba(0, 0, 0, 1);
+  padding: 1vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-image {
+  object-fit: cover;
+  height: min(80vh, 975px);
+}
+
+.lightbox-container h3 {
+  text-align: center;
+}
+
+.close {
+  border-radius: 5px;
+  padding: 2px 3px;
+  background-color: rgb(167, 50, 20);
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Media */
+@media only screen and (min-width: 1024px) {
+}
+
+@media only screen and (max-width: 1024px) {
+  .aboutFirstImgDiv {
+    display: none;
+  }
+  .contactForm,
+  .signupForm {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    height: inherit;
+  }
+
+  .col1 {
+    order: 1;
+  }
+  .col2 {
+    order: 2;
+  }
+  .col3 {
+    order: 4;
+  }
+  .col4 {
+    order: 3;
+  }
+  .col5 {
+    order: 5;
+  }
+  .col6 {
+    order: 6;
+  }
+
+  .col {
+    width: 90%;
+    height: auto;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .colParagraph {
+    column-count: 1;
+  }
+
+  .nameLogo {
+    display: none;
+  }
+
+  .navBarList {
+    width: 100%;
+  }
+
+  .portfolioDiv {
+    grid-template-columns: 90%;
+  }
+
+  .imgAndText a {
+    pointer-events: none;
+    cursor: default;
+  }
+
+  .clickForBetter {
+    display: none;
+  }
+
+  .contactForm,
+  .signupForm {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .homeBottomNav {
+    bottom: 20px;
+  }
+
+  .portfolioh1 {
+    font-size: 15vmin;
+  }
+
+  .portfolioh2 {
+    font-size: 5vmin;
+  }
+  .contactForm,
+  .signupForm {
+    width: 90%;
+  }
+
+  .navBar {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .navBar > * {
+    display: none;
+  }
+
+  .burgerDiv {
+    display: inline;
+  }
+}
